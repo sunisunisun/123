@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int a[500],n,i,x;
+	printf(" Please determine the value of n：");
+	scanf("%d",&n);
+	printf("Please input %d numbers",n);
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	printf("Please input the number x you are looking for :");
+	scanf("%d",&x);
+	for(i=0;i<=n-1&&a[i]!=x;i++);
+	if(i<n)
+	{printf("Found it！And delete it！");
+                printf("\n");
+	printf("And the rest of it is：");
+	for(i=0;i<n;i++)
+	{if(a[i]!=x)
+	printf("%3d",a[i]);
+	}
+	}
+	else
+		printf("Unfound！");
+
+
+	return 0;
+}
